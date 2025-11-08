@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel IoT - ESP32 + Firebase + Gráficas</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Panel IoT - ESP32 + Firebase</h1>
+
+  <div class="card-container">
+    <div class="cards">
+      <div class="sensor">🌡️ Temperatura: <span id="temp">--</span> °C</div>
+      <div class="sensor">💧 Humedad: <span id="hum">--</span> %</div>
+      <div class="sensor">☀️ Luz: <span id="light">--</span></div>
+    </div>
+  </div>
+
+
+  <div class="led">
+    <h3>💡 LED Control</h3>
+    <button id="led-btn">Encender LED</button>
+  </div>
+
+  <div class="charts">
+    <canvas id="tempChart"></canvas>
+    <canvas id="humChart"></canvas>
+    <canvas id="lightChart"></canvas>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

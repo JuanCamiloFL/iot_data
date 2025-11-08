@@ -1,0 +1,84 @@
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #0d1117;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  color: #00e1ff;
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.sensor {
+  background: #161b22;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00e1ff55;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 64px;
+}
+
+.led {
+  margin: 2rem 0;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #00e1ff;
+  color: #000;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00ffff;
+}
+
+.charts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+canvas {
+  background: #161b22;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Responsive: en pantallas pequeñas apilar las cards */
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  canvas {
+    width: 100%;
+    max-width: 100%;
+  }
+}
